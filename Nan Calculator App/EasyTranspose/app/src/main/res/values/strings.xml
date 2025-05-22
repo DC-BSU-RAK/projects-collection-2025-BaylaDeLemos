@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ChordTransposer</string>
+    <string name="transpose">Transpose</string>
+    <string name="transposed_chords_will_appear_here">Transposed chords will appear here</string>
+    <string name="how_to_use">How to Use</string>
+    <string name="select_target_key">OR select target key:</string>
+    <string name="instructions">Instructions</string>
+    <string name="transpose_by_semitones">Transpose by (+/- semitones):</string>
+    <string name="enter_instruction">1. Enter your chords (e.g. C G Am)\n2. Enter a transpose value (e.g. +2 or -1) or select a target key\n3. Tap \'Transpose\' to see the result</string>
+    <string name="got_it_btn">Got it</string>
+    <string name="enter_your_chords">Enter Chords (e.g. C G Am F):</string>
+    <string name="transpose_to_target_key">Or transpose to target key:</string>
+    <string name="chord">Chord</string>
+    <string name="up_or_down">+2 or -1</string>
+    <string-array name="keys_array">
+        <item>None</item>
+        <item>C</item>
+        <item>C# / Db</item>
+        <item>D</item>
+        <item>D# / Eb</item>
+        <item>E</item>
+        <item>F</item>
+        <item>F# / Gb</item>
+        <item>G</item>
+        <item>G# / Ab</item>
+        <item>A</item>
+        <item>A# / Bb</item>
+        <item>B</item>
+    </string-array>
+    <string name="spinner_prompt">Select target key</string>
+    <string name="applogo">AppLogo</string>
+    <string name="easytranspose">EasyTranspose</string>
+    <string name="logo">logo</string>
+
+</resources>
