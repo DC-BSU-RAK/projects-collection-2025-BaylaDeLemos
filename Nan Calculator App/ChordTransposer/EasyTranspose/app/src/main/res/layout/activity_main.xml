@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222332"
+    android:padding="24dp">
+
+    <!-- Root ConstraintLayout to position elements with constraints -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- App logo on top-left -->
+
+        <!-- App name text, aligned horizontally next to logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="36dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <!-- Label for chords input field -->
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="44dp"
+            android:text="EasyTranspose"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.119"
+            app:layout_constraintStart_toEndOf="@id/logo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/label_chords"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/enter_your_chords"
+            android:textColor="#d6e2ff"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
+
+        <!-- Chords input EditText, full width -->
+        <EditText
+            android:id="@+id/input_chords"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#383a59"
+            android:hint="@string/chord"
+            android:inputType="text"
+            android:textColor="#d6e2ff"
+            android:textColorHint="#d6e2ff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_chords"
+            tools:ignore="Autofill,VisualLintTextFieldSize" />
+
+        <!-- Label for semitones input -->
+        <TextView
+            android:id="@+id/label_semitones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/transpose_by_semitones"
+            android:textColor="#d6e2ff"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_chords" />
+
+        <!-- Semitones input EditText -->
+        <EditText
+            android:id="@+id/input_shift"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#383a59"
+            android:hint="@string/up_or_down"
+            android:inputType="numberSigned"
+            android:textColor="#d6e2ff"
+            android:textColorHint="#d6e2ff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_semitones"
+            tools:ignore="Autofill,VisualLintTextFieldSize" />
+
+        <!-- Label for target key spinner -->
+        <TextView
+            android:id="@+id/label_target_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/transpose_to_target_key"
+            android:textColor="#d6e2ff"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_shift" />
+
+        <!-- Spinner to select target key -->
+        <Spinner
+            android:id="@+id/spinner_target_key"
+            android:layout_width="361dp"
+            android:layout_height="62dp"
+            android:background="#607399"
+            android:entries="@array/keys_array"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_target_key" />
+
+        <!-- Button to perform transpose action -->
+        <Button
+            android:id="@+id/btn_transpose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#d6e2ff"
+            android:text="@string/transpose"
+            android:textColor="#222332"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_target_key"
+            tools:ignore="VisualLintButtonSize" />
+
+        <!-- Output text showing transposed chords -->
+        <TextView
+            android:id="@+id/output_chords"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/transposed_chords_will_appear_here"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#90ABFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_transpose" />
+
+        <!-- Button to open instructions modal -->
+        <Button
+            android:id="@+id/btn_modal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#d6e2ff"
+            android:text="@string/instructions"
+            android:textColor="#222332"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/output_chords"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="VisualLintButtonSize" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
