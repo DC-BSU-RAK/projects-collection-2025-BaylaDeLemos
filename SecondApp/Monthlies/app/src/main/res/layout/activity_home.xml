@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F8">
+
+    <!-- Welcome Text -->
+
+    <!-- Calendar Bar -->
+
+    <!-- Cycle Image -->
+
+    <!-- Calendar Button -->
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="335dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/greeting"
+        android:textColor="#8C7474"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck,VisualLintOverlap" />
+
+    <ImageView
+        android:id="@+id/calendar_bar"
+        android:layout_width="406dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greeting"
+        app:srcCompat="@drawable/cal_bar"
+        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints,VisualLintBounds" />
+
+    <!-- Statistics Button -->
+
+    <!-- Symptoms Button -->
+
+    <!-- Insert Input -->
+
+    <ImageView
+        android:id="@+id/cycle"
+        android:layout_width="398dp"
+        android:layout_height="304dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_bar"
+        app:srcCompat="@drawable/cycle"
+        tools:ignore="ContentDescription,ImageContrastCheck,VisualLintBounds" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calendar"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@android:color/transparent"
+        android:text="@string/calendar"
+        android:textColor="#A4A3A3"
+        android:textSize="13sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputs"
+        app:layout_constraintVertical_bias="0.341"
+        app:strokeColor="#A4A3A3"
+        app:strokeWidth="2dp"
+        tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/mood"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@android:color/transparent"
+        android:text="@string/symptoms"
+        android:textColor="#A4A3A3"
+        android:textSize="12sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/statistics"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toEndOf="@+id/calendar"
+        app:layout_constraintTop_toBottomOf="@+id/inputs"
+        app:layout_constraintVertical_bias="0.341"
+        app:strokeColor="#A4A3A3"
+        app:strokeWidth="2dp"
+        tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/statistics"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@android:color/transparent"
+        android:text="@string/statistics"
+        android:textColor="#A4A3A3"
+        android:textSize="14sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputs"
+        app:layout_constraintVertical_bias="0.341"
+        app:strokeColor="#A4A3A3"
+        app:strokeWidth="2dp"
+        tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/inputs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/insert_your_inputs"
+        android:textColor="#8C7474"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cycle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

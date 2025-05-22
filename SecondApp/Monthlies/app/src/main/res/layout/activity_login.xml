@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCE4E7"
+    tools:context=".LoginActivity">
+
+    <!-- Card-like container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="32dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="4dp"
+        android:outlineSpotShadowColor="@color/light_pink2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <!-- Logo -->
+
+            <!-- Welcome Text -->
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="84dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="116dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo_notxt"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/welcome"
+                android:textColor="#6A1812"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+            <!-- Create Acc -->
+            <TextView
+                android:id="@+id/create_acc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/create_an_account"
+                android:textColor="#E8AEB6"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcomeText"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Username/Email Input -->
+            <ImageView
+                android:id="@+id/usernameimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:contentDescription="@string/userimg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/create_acc"
+                app:srcCompat="@drawable/username"
+                tools:ignore="ImageContrastCheck" />
+
+            <EditText
+                android:id="@+id/user"
+                android:layout_width="221dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:text="@string/username_email"
+                android:textAlignment="viewStart"
+                android:textColor="#B3163F87"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/usernameimg"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/usernameimg"
+                app:layout_constraintTop_toTopOf="@+id/usernameimg"
+                tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintOverlap,TextContrastCheck" />
+
+            <!-- Password Input -->
+            <ImageView
+                android:id="@+id/passimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:contentDescription="@string/passimg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/usernameimg"
+                app:srcCompat="@drawable/password"
+                tools:ignore="ImageContrastCheck" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="227dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:text="@string/password"
+                android:textColor="#7A163F87"
+                app:layout_constraintBottom_toBottomOf="@+id/passimg"
+                app:layout_constraintEnd_toEndOf="@+id/passimg"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/passimg"
+                app:layout_constraintTop_toTopOf="@+id/passimg"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck" />
+
+            <!-- Sign Up Button -->
+            <Button
+                android:id="@+id/signup_btn"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#FBE0E4"
+                android:elevation="8dp"
+                android:text="@string/sign_up_btn"
+                android:textColor="#B6691812"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password"
+                app:layout_constraintVertical_bias="0.322"
+                tools:ignore="TextContrastCheck" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
